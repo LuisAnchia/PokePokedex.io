@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Pokédex</title>
+</head>
+
+<body>
+  <h1>Welcome to the Pokédex!</h1>
+  <form id="pokemonForm">
+    <label for="pokemonType">Type of Pokémon:</label>
+    <input type="text" id="pokemonType" name="type" required>
+
+    <label for="pokemonName">Name:</label>
+    <input type="text" id="pokemonName" name="name" required>
+
+    <label for="pokemonDescription">Description:</label>
+    <textarea id="pokemonDescription" name="description" required></textarea>
+
+    <label for="pokemonHasEvolution">Has Evolution:</label>
+    <input type="checkbox" id="pokemonHasEvolution" name="hasEvolution">
+
+    <label for="pokemonWeaknesses">Weaknesses:</label>
+    <input type="text" id="pokemonWeaknesses" name="weaknesses" required>
+
+    <input type="submit" id="createPokemonButton" value="Create Pokémon">
+  </form>
+
+  <label for="searchTerm">Search Pokémon by name or type:</label>
+  <input type="text" id="searchTerm">
+  <button id="searchButton">Search</button>
+
+  <button id="loadPokemons">Load Pokémon</button>
+
+  <table id="pokemonTable">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Has Evolution</th>
+        <th>Weaknesses</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="message"></div>
+
+  <!-- Formulario para editar Pokémon -->
+  <form id="editPokemonForm" style="display: none;">
+    <label for="editPokemonType">Type of Pokémon:</label>
+    <input type="text" id="editPokemonType" name="type" required>
+
+    <label for="editPokemonName">Name:</label>
+    <input type="text" id="editPokemonName" name="name" required>
+
+    <label for="editPokemonDescription">Description:</label>
+    <textarea id="editPokemonDescription" name="description" required></textarea>
+
+    <label for="editPokemonHasEvolution">Has Evolution:</label>
+    <input type="checkbox" id="editPokemonHasEvolution" name="hasEvolution">
+
+    <label for="editPokemonWeaknesses">Weaknesses:</label>
+    <input type="text" id="editPokemonWeaknesses" name="weaknesses" required>
+
+    <input type="submit" id="updatePokemonButton" value="Update Pokémon">
+    <button type="button" id="deletePokemonButton">Delete Pokémon</button>
+  </form>
+
+  <div>
+    <button id="prevPage">Previous Page</button>
+    <span id="currentPage">Page 1</span>
+    <button id="nextPage">Next Page</button>
+  </div>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/xsCK7brL6fU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
